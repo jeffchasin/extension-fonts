@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Typekit Extension Configuration</title>
+  <meta name="description" content="Configure Typekit ID">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <div class="form-group row">
+      <label class="col-sm-3 col-form-label" for="typekitid">Typekit ID</label>
+      <div class="co-sm-3">
+        <input type="text" id="typekitID" class="form-control">
+      </div>
+      </label>
+    </div>
+    </form>
+  </div>
+
+  <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+  <script>
+    window.extensionBridge.register({
+      init: function (info) {
+        if (info.settings) {
+          document.getElementById('typekitID').value = info.settings.typekitID || '';
+        }
+      },
+
+      getSettings: function () {
+        return {
+          typekitID: document.getElementById('typekitID').value
+        };
+      },
+
+      validate: function () {
+        var idField = document.getElementById('typekitID').value;
+        idField.invalid = !idField.value;
+        return !idField.invalid;
+      }
+    });
+  </script>
+</body>
+
+</html>

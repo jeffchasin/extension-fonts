@@ -1,0 +1,32 @@
+{
+  "displayName": "Adobe Typekit",
+  "name": "extension-typekit",
+  "version": "1.0.0",
+  "description": "Adobe Typekit brings thousands of fonts from foundry partners into one beautiful library for subscription or purchase. Enjoy to browse and easy to use. Learn more at https://typekit.com/",
+  "iconPath": "tk-logo-32x32.svg",
+  "author": {
+    "name": "Jeff Chasin",
+    "url": "http://developer.adobelaunch.com/"
+  },
+  "viewBasePath": "src/view/",
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "actions": [
+    {
+      "displayName": "Load Embed Code",
+      "name": "load-embed-code",
+      "libPath": "src/lib/actions/loadEmbedCode.js",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}
