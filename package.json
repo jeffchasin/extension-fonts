@@ -1,11 +1,15 @@
 {
   "name": "extension-typekit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This Typekit extension for Adobe Launch brings thousands of fonts from foundry partners into one beautiful library for subscription or purchase. Enjoy quick browsing and easy use. Learn more at https://typekit.com/",
   "license": "Apache-2.0",
   "author": {
     "name": "Jeff Chasin",
     "url": "http://developer.adobelaunch.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffchasin/extension-typekit"
   },
   "scripts": {
     "sandbox": "reactor-sandbox",
@@ -13,9 +17,9 @@
     "package": "reactor-packager"
   },
   "devDependencies": {
-    "@adobe/reactor-packager": "^2.6.0",
-    "@adobe/reactor-sandbox": "^8.2.0",
-    "@adobe/reactor-scaffold": "^1.1.9",
-    "@adobe/reactor-turbine": "^23.0.0"
+    "@adobe/reactor-packager": "^2.6.2",
+    "@adobe/reactor-sandbox": "^8.2.1",
+    "@adobe/reactor-scaffold": "^1.1.10",
+    "@adobe/reactor-turbine": "^24.2.1"
   }
 }
