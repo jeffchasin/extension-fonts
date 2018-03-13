@@ -20,6 +20,6 @@
     "@adobe/reactor-packager": "^2.6.2",
     "@adobe/reactor-sandbox": "^8.2.1",
     "@adobe/reactor-scaffold": "^1.1.10",
-    "@adobe/reactor-turbine": "^24.2.1"
+    "@adobe/reactor-turbine": "^24.3.0"
   }
 }

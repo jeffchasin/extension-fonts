@@ -40,8 +40,8 @@
 
       getSettings: function () {
         return {
-          typekitID: document.getElementById('typekitID').value
-        };
+          typekitID: document.getElementById('typekitID').value || ''
+        }
       },
 
       validate: function () {

@@ -4,21 +4,27 @@ module.exports = {
   rules: [
     {
     name: 'Example Rule',
-      actions: [
-        {
-          modulePath: 'example-extension/src/lib/actions/loadEmbedCode.js',
-          settings: {}
-        }
-      ]
-    }
+    events: [
+      {
+        modulePath: 'sandbox/pageTop.js',
+        settings: {}
+         }
+       ],
+    actions: [
+      {
+        modulePath: 'extension-typekit/src/lib/actions/loadEmbedCode.js',
+        settings: {}
+         }
+       ]
+     }
   ],
   extensions: {
     'extension-typekit': {
       displayName: 'Adobe Typekit',
-      settings: {
-        typekitID: 'nxn1sig'
-      }
-    }
+     settings: {
+       typekitID: 'nxn1sig'
+     }
+   }
   },
   property: {
     name: 'Sandbox property',

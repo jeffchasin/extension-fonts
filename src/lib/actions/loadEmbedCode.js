@@ -8,6 +8,7 @@ module.exports = function(extensionSettings) {
 
   loadScript(url).then(function() {
     // Do something ...
+    console.log('the url is: ' + url);
     Typekit.load();
     turbine.logger.info('Typekit loaded successfully');
   }).catch(function() {
