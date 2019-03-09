@@ -3,51 +3,56 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Typekit Extension Configuration</title>
+  <title>Adobe Fonts Extension Configuration</title>
   <meta name="description" content="Configure Typekit ID">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="./spectrum-core.css">
+  <link rel="stylesheet" href="./spectrum-light.css">
+  <style>
+    input:invalid {
+      border: 1px solid red;
+    }
+  </style>
 </head>
 
-<body>
+<body class="spectrum spectrum--light">
   <div class="container">
-    <h3>Add Typekit fonts to your website</h3>
-      <p>Use this extension to add a variety of fonts to your website. Learn more about
-        <a href="https://helpx.adobe.com/typekit/using/add-fonts-website.html" target="_blank">how to add fonts</a>.</p>
-  
-        <p>If you know your Typekit kit ID, enter it here:</p>
-    <form>
-      <div class="form-group row">
-      <label class="col-sm-3 col-form-label" for="typekitid"><strong>Typekit ID</strong></label>
-      <div class="co-sm-3">
-        <input type="text" id="typekitID" class="form-control">
+    <h3>Add Adobe Fonts to your website</h3>
+    <p>Use this extension to add a variety of fonts to your website. Learn more about
+      <a href="https://helpx.adobe.com/fonts/using/add-fonts-website.html" target="_blank">how to add fonts</a>.</p>
+
+    <p>Enter your Web Project ID here:</p>
+    <form class="spectrum-Form">
+      <div class="spectrum-Form-item">
+        <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="typekitID">Project ID</label>
+        <div class="spectrum-Form-itemField">
+          <input type="text" id="typekitID" class="spectrum-Textfield" required autofocus>
+        </div>
       </div>
-      </label>
-    </div>
     </form>
   </div>
 
   <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
   <script>
+
+    var typeKitIdInput = document.getElementById('typekitID');
+
     window.extensionBridge.register({
       init: function (info) {
         if (info.settings) {
-          document.getElementById('typekitID').value = info.settings.typekitID || '';
+          typeKitIdInput.value = info.settings.typekitID;
         }
       },
 
       getSettings: function () {
         return {
-          typekitID: document.getElementById('typekitID').value || ''
+          typekitID: typeKitIdInput.value
         }
       },
 
       validate: function () {
-        var idField = document.getElementById('typekitID').value;
-        idField.invalid = !idField.value;
-        return !idField.invalid;
+        return typeKitIdInput.checkValidity();
       }
     });
   </script>

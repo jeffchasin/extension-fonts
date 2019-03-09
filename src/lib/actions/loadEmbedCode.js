@@ -1,15 +1,15 @@
 'use strict';
 
-var extensionSettings = turbine.getExtensionSettings();
+var kitId = turbine.getExtensionSettings().typekitID;
 var loadScript = require('@adobe/reactor-load-script');
 
-module.exports = function() {
-  var url = 'https://use.typekit.net/' + extensionSettings.typekitID + '.js';
+module.exports = function () {
+  var url = 'https://use.typekit.net/' + kitId + '.js';
 
-  loadScript(url).then(function() {
+  loadScript(url).then(function () {
     Typekit.load();
-    turbine.logger.info('Typekit loaded successfully');
-  }).catch(function() {
-    turbine.logger.error('Typekit failed to load');
+    turbine.logger.info('Kit loaded successfully');
+  }).catch(function () {
+    turbine.logger.error('Kit failed to load');
   });
 };
