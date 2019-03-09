@@ -1,12 +1,13 @@
 {
-  "displayName": "Adobe Typekit",
+  "displayName": "Adobe Fonts",
   "name": "extension-typekit",
-  "version": "1.0.0",
-  "description": "Adobe Typekit brings thousands of fonts from foundry partners into one beautiful library for subscription or purchase. Enjoy to browse and easy to use. Learn more at https://typekit.com/",
-  "iconPath": "tk-logo-32x32.svg",
+  "version": "1.0.1",
+  "description": "Our complete library of fonts is included with all Creative Cloud subscription plans. Choose any subscription plan and the complete library is yours to use. Learn more at https://fonts.adobe.com/about",
+  "platform": "web",
+  "iconPath": "Adobe_Creative_Cloud.svg",
   "author": {
     "name": "Jeff Chasin",
-    "url": "http://developer.adobelaunch.com/"
+    "url": "https://github.com/jeffchasin/extension-fonts"
   },
   "viewBasePath": "src/view/",
   "configuration": {
